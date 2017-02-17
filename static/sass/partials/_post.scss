@@ -1,0 +1,33 @@
+.post {
+  border: 2px solid #eee;
+  border-radius: 2px;
+  padding: 20px;
+  .post-heading {
+    position: relative;
+    .post-title {
+      @media(max-width: 544px) {
+        margin-top: 10vh;
+      }
+    }
+  }
+  .post-date {
+    position: absolute;
+    right: 15px;
+    top: 0px;
+    @media(max-width: 544px) {
+      text-align: right;
+      right: 0;
+      margin-top: -10vh;
+    }
+  }
+}
+.post-content {
+  margin-top: 15px;
+}
+.comments {
+  margin-top: 2vh;
+  #commentHolder {
+    border: 2px solid #eee;
+    border-radius: 2px;
+  }
+}

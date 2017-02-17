@@ -1,0 +1,17 @@
+body {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+  @media(min-width: 768px) {
+    width: 60%;
+  }
+}
+//Modules & Variables
+@import "partials/base";
+
+//Partials
+@import "partials/typography";
+@import "partials/ui";
+@import "partials/forms";
+@import "partials/post";

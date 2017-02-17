@@ -1,0 +1,75 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: rgba(0, 0, 0, .8);
+}
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+a {
+  color: $highlight;
+  text-decoration: none;
+  transition: opacity 1s ease;
+  &:hover {
+    opacity: 0.75;
+  }
+  &:visited {
+    color: $highlight;
+  }
+}
+.error {
+  color: red;
+}
+.post-title {
+  font-weight: bold;
+  a {
+    font-size: 24px;
+    &:hover {
+      color: $dim;
+    }
+    @media(max-width: 1000px) {
+      font-size: 18px;
+    }
+  }
+  h2 {
+    font-size: 16px;
+    margin: 0;
+    &:hover {
+      color: rgba(0,0,0,0.8);
+    }
+  }
+}
+.post-date {
+  line-height: 27.5px;
+  vertical-align: middle;
+  color: $dim;
+}
+.write-post {
+  font-size: 16px;
+  font-weight: 600;
+}
+.login-area {
+  font-size: 13px;
+  color: gray;
+}
+.login-link {
+  color: gray;
+  text-decoration: none;
+  &:visited {
+    color: gray;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.main-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+.inline-input {
+  font-size: 14px !important;
+  color: #00ab6b;
+  font-weight: 600;
+}

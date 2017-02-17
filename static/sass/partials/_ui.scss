@@ -1,0 +1,28 @@
+.main-title {
+  display: block;
+  margin-bottom: 30px;
+  @media(max-width: 544px) {
+    visibility: hidden;
+  }
+  #logo {
+    width: 40px;
+    vertical-align: top;
+    @media(max-width: 544px) {
+      visibility: visible;
+    }
+  }
+}
+.write-post, .login-area, {
+  position: absolute;
+  right: 10px;
+}
+.write-post {
+  top: 33px;
+}
+.login-area {
+  top: 10px;
+}
+.author-controls {
+  padding: 10px 5px;
+  display: inline-block;
+}

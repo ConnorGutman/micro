@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if user %}
+    <p>Edit comment:</p>
+    <form method="post" action="/updatecomment/{{commentID}}">
+      <textarea id="commentBox" name="commentText">{{commentText}}</textarea>
+      <input type="submit"></input>
+      <p><a href="/{{postID}}">Return to post</a></p>
+    </form>
+    {% else %}
+    {% endif %}
+{% endblock %}

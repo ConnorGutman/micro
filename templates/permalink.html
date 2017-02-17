@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if user.name == post.author %}
+  <a href="/edit/{{post.key().id()}}" class="author-controls">Edit Post</a><a href="/delete/{{post.key().id()}}" class="author-controls">Delete Post</a>
+  {% else %}
+  {% endif %}
+  {{post.render() | safe}}
+  <div class="comments">
+    <p>Comments:</p>
+    {% for comment in comments %}
+    <div id="commentHolder">
+    <b>{{ comment.author }}:</b>
+    {{ comment.text }}
+    {% if user.name == comment.author %}
+    <form method="post" action="/editcomment/{{comment.key().id()}}" class="inline-form"><input type="submit" name="edit" value="edit" class="inline-input"></input></form>
+    <form method="post" action="/deletecomment/{{comment.key().id()}}" class="inline-form"><input type="submit" name="delete" value="delete" class="inline-input"></input></form>
+    {% else %}
+    {% endif %}
+  </div>
+    <br>
+    {% endfor %}
+    {% if user %}
+    <p>Leave a comment:</p>
+    <form method="post" action="/newcomment/{{post.key().id()}}">
+      <textarea id="commentBox" name="commentText">{{commentText}}</textarea>
+      <input type="submit"></input>
+    </form>
+    {% else %}
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for comment in comments %}
+  {{ comment.text }}
+  <br><br>
+  {% endfor %}
+{% endblock %}
