@@ -2,7 +2,7 @@
 
 Micro was built as a submission for project 3 of Udacity's full-stack web developer nanodegree. The goal of this project is to create a simple multi-user blog along the lines of "Medium".
 
-[Check out Micro here.](todo)
+[Check out Micro here.](https://p3-micro.appspot.com/)
 
 ### Table of contents
   - [Getting Started](#getting-started)
