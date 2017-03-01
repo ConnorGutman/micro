@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <link type="text/css" rel="stylesheet" href="/static/main.css" />
 
-  <title>Pico</title>
+  <title>Micro</title>
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/static/manifest.json">
+  <link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="/static/favicon.ico">
+  <meta name="msapplication-config" content="/static/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -12,18 +22,13 @@
   </a>
   <a href="/newpost" class="write-post">Write a post</a>
   <div class="login-area">
-    {% if user %}
-      {{user.name}} (<a class="login-link" href="/logout">logout</a>)
-    {% else %}
-      <a class="login-link" href="/login">login</a>
-      |
-      <a class="login-link" href="/signup">signup</a>
-    {% endif %}
+    {% if user %} {{user.name}} (<a class="login-link" href="/logout">logout</a>) {% else %}
+    <a class="login-link" href="/login">login</a> |
+    <a class="login-link" href="/signup">signup</a> {% endif %}
   </div>
 
   <div id="content">
-  {% block content %}
-  {% endblock %}
+    {% block content %} {% endblock %}
   </div>
 </body>
 
